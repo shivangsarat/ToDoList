@@ -1,11 +1,11 @@
 import React from 'react';
 
-class List extends React.Component{
+class List extends React.Component {
 	constructor(props) {
 		super(props);
-		this.createTask=this.createTask.bind(this);
+		this.createTask = this.createTask.bind(this);
 	}
-	delete (key) {
+	delete(key) {
 		this.props.delete(key);
 	}
 
@@ -13,13 +13,15 @@ class List extends React.Component{
 		return <li> {b1.task} <button onClick={() => this.delete(b1.key)}>X</button> </li>
 	}
 
-	render () {
+	render() {
 		return (
-  			<ul> 
-  				{this.props.items.map(this.createTask)}
-  			</ul>
-  		);
-  	}
+			<div>
+				<ul>
+					{this.props.items.map(this.createTask)}
+				</ul>
+			</div>
+		);
+	}
 }
 
 export default List;
