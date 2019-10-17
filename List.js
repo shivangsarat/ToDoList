@@ -19,6 +19,9 @@ class List extends React.Component {
 				<ul>
 					{this.props.items.map(this.createTask)}
 				</ul>
+				<ul>
+					End of List
+				</ul>
 			</div>
 		);
 	}
